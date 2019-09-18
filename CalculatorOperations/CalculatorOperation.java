@@ -10,7 +10,7 @@ import static CalculatorOperations.Multiplication.multiplication;
 import static CalculatorOperations.Plus.plus;
 
 public class CalculatorOperation  {
-  public void chooseCalculatorOperation(String operation) throws NonDefinedOperationException {
+  public void chooseCalculatorOperation(String operation) throws UnsupportedOperationException {
       Scanner inputDevice = new Scanner(System.in);
       System.out.print("Please enter first number: ");
       double a = inputDevice.nextDouble();
@@ -30,7 +30,7 @@ public class CalculatorOperation  {
         case "/":
           division(a, b);
         default:
-            throw new NonDefinedOperationException("Incorrect operation symbol. Please choose +, -, / or *");
+            throw new UnsupportedOperationException("Incorrect operation symbol. Please choose +, -, / or *");
     }
 }
 }

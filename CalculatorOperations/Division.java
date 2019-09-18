@@ -1,16 +1,14 @@
 package CalculatorOperations;
 
 
-    public class Division {
+public class Division {
 
-        public static double division(double firstNumber, double secondNumber) throws ArithmeticException {
+    public static double division(double firstNumber, double secondNumber) throws ArithmeticException {
 
-            try {
-            return (firstNumber/ secondNumber);
+        try {
+            return (firstNumber / secondNumber);
+        } catch (ArithmeticException e) {
+            throw new ArithmeticException("Can't divide by zero ");
         }
-        catch (ArithmeticException e) {
-            System.out.println("Can't divide by zero ");
-        }
-    return 0 ;
     }
 }
